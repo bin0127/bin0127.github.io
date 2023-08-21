@@ -2,7 +2,7 @@
 const maxim = [
     '「自分の限界を信じてはなりません。その限界を超える方法を見つけましょう。」 byマイケル・ジョーダン',
     '「親切な行いは、たとえそれがどんなに些細なことであったとしても、無駄にはなりません」 byイソップ',
-    '「忙しいことを理由にして，やりたいことを放棄しない」 byカール・グスタフ・ユング'
+    '「忙しいことを理由にして，やりたいことを放棄しない」 byユング'
 ];
 
 const typing = (element, target) => {
@@ -11,8 +11,6 @@ const typing = (element, target) => {
     const num = Math.floor(Math.random() * maxim.length);
     const string = maxim[num];
     let promises = [];
-
-    console.log(num);
 
     elem.classList.remove('is-typing-off');
 

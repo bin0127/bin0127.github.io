@@ -166,7 +166,8 @@ body {
   }
 }
 .c-card__category--blue, .c-card__category--green, .c-card__category--red, .c-card__category {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  line-height: 1.4;
   text-align: center;
   margin: 0 0 20px;
 }
@@ -202,19 +203,9 @@ body {
   transition: opacity 0.3s;
   z-index: 2;
 }
-.c-card__link:hover::after {
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-}
-.c-card__link:hover .c-card__inner::before, .c-card__link:hover .c-card__inner::after {
-  width: 96%;
-  height: 96%;
-  opacity: 1;
-}
 .c-card__inner {
   background: #ededed;
-  padding: 30px 20px;
+  padding: 20px;
 }
 .c-card__inner::before {
   top: 2%;
@@ -247,6 +238,18 @@ body {
   color: #1700c1;
 }
 
+@media only screen and (min-width: 1025px) {
+  .c-card__link:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+  .c-card__link:hover .c-card__inner::before, .c-card__link:hover .c-card__inner::after {
+    width: 96%;
+    height: 96%;
+    opacity: 1;
+  }
+}
 .c-page-top span::after, .c-page-top span::before {
   content: "";
   position: absolute;
@@ -269,16 +272,7 @@ body {
   padding: 2px 0 0;
   border-radius: 50%;
   opacity: 0;
-}
-.c-page-top:hover {
-  background: #ededed;
-}
-.c-page-top:hover span {
-  background: #212124;
-}
-.c-page-top:hover span::after {
-  border-top: 2px solid #212124;
-  border-right: 2px solid #212124;
+  z-index: 9999;
 }
 .c-page-top span {
   display: inline-block;
@@ -304,6 +298,18 @@ body {
   transition: opacity 0.5s;
 }
 
+@media only screen and (min-width: 1025px) {
+  .c-page-top:hover {
+    background: #ededed;
+  }
+  .c-page-top:hover span {
+    background: #212124;
+  }
+  .c-page-top:hover span::after {
+    border-top: 2px solid #212124;
+    border-right: 2px solid #212124;
+  }
+}
 .c-modal {
   position: fixed;
   display: flex;
@@ -341,8 +347,8 @@ body {
   opacity: 0.8;
 }
 .c-modal__inner {
-  width: 96%;
-  height: 88%;
+  width: 94%;
+  height: 86%;
 }
 .c-modal__item {
   display: block;
@@ -498,7 +504,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 94%;
+  width: 92%;
   min-height: 100vh;
   margin: 0 auto;
 }
@@ -525,7 +531,7 @@ body {
   }
 }
 .p-works__inner {
-  width: 94%;
+  width: 92%;
   margin: 0 auto;
 }
 
@@ -538,7 +544,7 @@ body {
   background: #ededed;
 }
 .p-about__inner {
-  width: 94%;
+  width: 92%;
   margin: 0 auto;
   padding: 50px 0 80px;
 }
